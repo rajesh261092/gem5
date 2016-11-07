@@ -1,4 +1,4 @@
-# Performance Project Configuration
+# Performance Project Configuration - Changed by Kshitiz
 # Copyright (c) 2012-2013 ARM Limited
 # All rights reserved.
 #
