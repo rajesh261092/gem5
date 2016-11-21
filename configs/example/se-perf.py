@@ -231,6 +231,9 @@ if options.simpoint_profile:
     if np > 1:
         fatal("SimPoint generation not supported with more than one CPUs")
 
+system.cpu[0].issueWidth = 4
+system.cpu[1].issueWidth = 6
+
 for i in xrange(np):
     if options.smt:
         system.cpu[i].workload = multiprocesses
