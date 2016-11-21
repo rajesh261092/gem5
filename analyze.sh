@@ -30,4 +30,4 @@ build/X86/gem5.opt -r --outdir=output/susan/run3 configs/example/se.py --cmd=ben
 build/X86/gem5.opt -r --outdir=output/susan/run4 configs/example/se.py --cmd=benchmarks/susan/bin/susan_O2 --options="benchmarks/susan/input_large.pgm output/susan/run4/output_large.smoothing.pgm -s" --take-simpoint-checkpoints="output/susan/run1/simpoint.out,output/susan/run1/simpoint.weight,10000000,1000000" &
 
 
-build/X86/gem5.opt -r --outdir=output/susan/run5 configs/example/se.py --cmd=benchmarks/susan/bin/susan_O2 --options="benchmarks/susan/input_large.pgm output/susan/run5/output_large.smoothing.pgm -s" --restore-simpoint-checkpoint -r 1 --checkpoint-dir="output/susan/run2/cpt.simpoint_00_inst_140000000_weight_1.000000_interval_10000000_warmup_0" &
+build/X86/gem5.opt -r --outdir=output/susan/run5 configs/example/se.py --cmd=benchmarks/susan/bin/susan_O2 --options="benchmarks/susan/input_large.pgm output/susan/run5/output_large.smoothing.pgm -s" --restore-simpoint-checkpoint -r 1 --checkpoint-dir="output/susan/run2" -s 1000000 --caches &
