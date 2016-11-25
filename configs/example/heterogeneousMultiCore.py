@@ -129,9 +129,19 @@ Options.addSEOptions(parser)
 if '--ruby' in sys.argv:
     Ruby.define_options(parser)
 
+parser.set_defaults(cpu_type="detailed", cpu_clock='2.5GHz', l1i_size="32kB", l1d_size="32kB", l2_size="1MB", l1d_assoc=8, l1i_assoc=8)
+
 (options, args) = parser.parse_args()
 
+parser.set_defaults(cpu_type="minor", cpu_clock='1.2GHz', l1i_size="32kB", l1d_size="24kB", l2_size="1MB", l1d_assoc=6, l1i_assoc=8)
+
+(options2, args2) = parser.parse_args()
+
 if args:
+    print "Error: script doesn't take any positional arguments"
+    sys.exit(1)
+
+if args2:
     print "Error: script doesn't take any positional arguments"
     sys.exit(1)
 
@@ -168,14 +178,28 @@ else:
 
 
 (CPUClass, test_mem_mode, FutureClass) = Simulation.setCPUClass(options)
+(CPUClass2, test_mem_mode2, FutureClass2) = Simulation.setCPUClass(options2)
 CPUClass.numThreads = numThreads
+CPUClass2.numThreads = numThreads
+
+CPUClass.fetchWidth = 4
+CPUClass.decodeWidth = 3
+CPUClass.renameWidth = 4
+CPUClass.dispatchWidth = 4
+CPUClass.issueWidth = 6
+CPUClass.commitWidth = 3
 
 # Check -- do not allow SMT with multiple CPUs
 if options.smt and options.num_cpus > 1:
     fatal("You cannot use SMT with multiple CPUs!")
 
 np = options.num_cpus
-system = System(cpu = [CPUClass(cpu_id=i) for i in xrange(np)],
+#system = System(cpu = [CPUClass(cpu_id=i) for i in xrange(np)],
+#                mem_mode = test_mem_mode,
+#                mem_ranges = [AddrRange(options.mem_size)],
+#                cache_line_size = options.cacheline_size)
+
+system = System(cpu = [CPUClass(cpu_id=0), CPUClass2(cpu_id=1), CPUClass2(cpu_id=2)],
                 mem_mode = test_mem_mode,
                 mem_ranges = [AddrRange(options.mem_size)],
                 cache_line_size = options.cacheline_size)
@@ -231,8 +255,8 @@ if options.simpoint_profile:
     if np > 1:
         fatal("SimPoint generation not supported with more than one CPUs")
 
-system.cpu[0].issueWidth = 4
-system.cpu[1].issueWidth = 6
+#system.cpu[0].issueWidth = 4
+#system.cpu[1].issueWidth = 6
 
 for i in xrange(np):
     if options.smt:
@@ -284,7 +308,7 @@ else:
     MemClass = Simulation.setMemClass(options)
     system.membus = SystemXBar()
     system.system_port = system.membus.slave
-    CacheConfig.config_cache(options, system)
+    CacheConfig.config_cache2(options, system)
     MemConfig.config_mem(options, system)
 
 root = Root(full_system = False, system = system)

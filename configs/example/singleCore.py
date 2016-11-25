@@ -129,7 +129,8 @@ Options.addSEOptions(parser)
 if '--ruby' in sys.argv:
     Ruby.define_options(parser)
 
-parser.set_defaults(cpu_clock='2.5GHz', l1i_size="32kB", l1d_size="32kB", l2_size="1MB", l1d_assoc=8, l1i_assoc=8)
+parser.set_defaults(cpu_clock='2.5GHz', l1i_size="32kB",
+        l1d_size="32kB", l2_size="1MB", l1d_assoc=8, l1i_assoc=8)
 
 (options, args) = parser.parse_args()
 
