@@ -129,11 +129,13 @@ Options.addSEOptions(parser)
 if '--ruby' in sys.argv:
     Ruby.define_options(parser)
 
-parser.set_defaults(cpu_type="detailed", cpu_clock='2.5GHz', l1i_size="32kB", l1d_size="32kB", l2_size="1MB", l1d_assoc=8, l1i_assoc=8)
+parser.set_defaults(cpu_type="detailed", cpu_clock='2.5GHz', l1i_size="32kB",
+        l1d_size="32kB", l2_size="1MB", l1d_assoc=8, l1i_assoc=8)
 
 (options, args) = parser.parse_args()
 
-parser.set_defaults(cpu_type="minor", cpu_clock='1.2GHz', l1i_size="32kB", l1d_size="24kB", l2_size="1MB", l1d_assoc=6, l1i_assoc=8)
+parser.set_defaults(cpu_type="minor", cpu_clock='1.2GHz', l1i_size="32kB",
+        l1d_size="24kB", l2_size="1MB", l1d_assoc=6, l1i_assoc=8)
 
 (options2, args2) = parser.parse_args()
 
@@ -199,7 +201,8 @@ np = options.num_cpus
 #                mem_ranges = [AddrRange(options.mem_size)],
 #                cache_line_size = options.cacheline_size)
 
-system = System(cpu = [CPUClass(cpu_id=0), CPUClass2(cpu_id=1), CPUClass2(cpu_id=2)],
+system = System(cpu = [CPUClass(cpu_id=0), CPUClass2(cpu_id=1),
+    CPUClass2(cpu_id=2)],
                 mem_mode = test_mem_mode,
                 mem_ranges = [AddrRange(options.mem_size)],
                 cache_line_size = options.cacheline_size)
