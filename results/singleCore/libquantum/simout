@@ -1,0 +1,16 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 23 2016 21:20:46
+gem5 started Nov 23 2016 23:18:00
+gem5 executing on supreme.cerc.utexas.edu, pid 14522
+command line: build/X86/gem5.fast -r --outdir=output/singleCore/libquantum configs/example/singleCore.py --cpu-type=detailed --caches --l2cache --cmd=../../../rrip/cpu2006/benchspec/CPU2006/462.libquantum/exe/libquantum_base.amd64-m64-gcc42-nn '--options=33 5' --output=output/singleCore/libquantum/test.out
+
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
+0: system.remote_gdb.listener: listening for remote gdb on port 7001
+warn: ClockedObject: More than one power state change request encountered within the same simulation tick
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+Exiting @ tick 58754942400 because target called exit()

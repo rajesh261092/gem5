@@ -1,0 +1,26 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov  7 2016 17:52:15
+gem5 started Nov 26 2016 11:44:22
+gem5 executing on twin, pid 20566
+command line: build/X86/gem5.fast -r --outdir=output/multiCore/cactusrun1 configs/example/multiCore.py --restore-simpoint-checkpoint -r 1 --checkpoint-dir=output/multiCore/cactusprofile '--cmd=../../../big/rrip/cpu2006/benchspec/CPU2006/436.cactusADM/exe/cactusADM_base.amd64-m64-gcc42-nn;../../../big/rrip/cpu2006/benchspec/CPU2006/436.cactusADM/exe/cactusADM_base.amd64-m64-gcc42-nn;../../../big/rrip/cpu2006/benchspec/CPU2006/436.cactusADM/exe/cactusADM_base.amd64-m64-gcc42-nn' '--options=../../../big/rrip/cpu2006/benchspec/CPU2006/436.cactusADM/data/test/input/benchADM.par;../../../big/rrip/cpu2006/benchspec/CPU2006/436.cactusADM/data/test/input/benchADM.par;../../../big/rrip/cpu2006/benchspec/CPU2006/436.cactusADM/data/test/input/benchADM.par' '--output=output/singleCore-1gb/cactusADM/benchADM.out1;output/singleCore-1gb/cactusADM/benchADM.out2;output/singleCore-1gb/cactusADM/benchADM.out3' --cpu-type=TimingSimpleCPU --caches --l2cache --num-cpus=3 --mem-size=3GB
+
+Resuming from output/multiCore/cactusprofile/cpt.simpoint_00_inst_4999000000_weight_1.000000_interval_100000000_warmup_1000000
+Resuming from SimPoint #0, start_inst:4999000000, weight:1.000000, interval:100000000, warmup:1000000
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (4096 Mbytes)
+0: system.remote_gdb.listener: listening for remote gdb on port 7000
+0: system.remote_gdb.listener: listening for remote gdb on port 7001
+0: system.remote_gdb.listener: listening for remote gdb on port 7002
+warn: optional parameter system.cpu0.workload:M5_pid not present
+warn: optional parameter system.cpu1.workload:M5_pid not present
+warn: optional parameter system.cpu2.workload:M5_pid not present
+Switch at curTick count:10000
+info: Entering event queue @ 5191999163000.  Starting simulation...
+Switched CPUS @ tick 5191999173000
+switching cpus
+info: Entering event queue @ 5191999173000.  Starting simulation...
+Warmed up! Dumping and resetting stats!
+info: Entering event queue @ 5196133362441.  Starting simulation...
+Done running SimPoint!

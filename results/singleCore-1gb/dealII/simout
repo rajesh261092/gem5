@@ -1,0 +1,28 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 23 2016 21:20:46
+gem5 started Nov 24 2016 15:31:30
+gem5 executing on supreme.cerc.utexas.edu, pid 25281
+command line: build/X86/gem5.fast -r --outdir=output/singleCore-1gb/dealII configs/example/singleCore.py --cpu-type=detailed --caches --l2cache --cmd=../../../rrip/cpu2006/benchspec/CPU2006/447.dealII/exe/dealII_base.amd64-m64-gcc42-nn --options=8 --output=output/singleCore-1gb/dealII/log --mem-size=1GB
+
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+0: system.remote_gdb.listener: listening for remote gdb on port 7043
+warn: ClockedObject: More than one power state change request encountered within the same simulation tick
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+warn: instruction 'fsubrp' unimplemented
+warn: instruction 'fsubrp' unimplemented
+warn: instruction 'fsubr' unimplemented
+warn: instruction 'fdivrp' unimplemented
+
+
+----------------------------------------------------
+Exception on processing: 
+Iterative method reported convergence failure in step 79 with residual -nan
+Aborting!
+----------------------------------------------------
+Exiting @ tick 160462434400 because target called exit()

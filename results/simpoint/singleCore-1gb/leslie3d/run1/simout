@@ -1,0 +1,22 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov  7 2016 17:52:15
+gem5 started Nov 26 2016 07:36:50
+gem5 executing on twin, pid 17839
+command line: build/X86/gem5.fast -r --outdir=output/singleCore-1gb/leslie3d/run1 configs/example/singleCore.py --cpu-type=detailed --caches --l2cache --cmd=../../../big/rrip/cpu2006/benchspec/CPU2006/437.leslie3d/exe/leslie3d_base.amd64-m64-gcc42-nn --input=../../../big/rrip/cpu2006/benchspec/CPU2006/437.leslie3d/data/test/input/leslie3d.in --output=output/singleCore-1gb/leslie3d/leslie3d.stdout --mem-size=1GB --restore-simpoint-checkpoint -r 1 --checkpoint-dir=output/singleCore-1gb/leslie3d/
+
+Resuming from output/singleCore-1gb/leslie3d/cpt.simpoint_00_inst_25199000000_weight_1.000000_interval_100000000_warmup_1000000
+Resuming from SimPoint #0, start_inst:25199000000, weight:1.000000, interval:100000000, warmup:1000000
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+0: system.remote_gdb.listener: listening for remote gdb on port 7001
+warn: optional parameter system.cpu.workload:M5_pid not present
+Switch at curTick count:10000
+info: Entering event queue @ 23743072363000.  Starting simulation...
+Switched CPUS @ tick 23743072373000
+switching cpus
+info: Entering event queue @ 23743072373000.  Starting simulation...
+Warmed up! Dumping and resetting stats!
+info: Entering event queue @ 23744416031200.  Starting simulation...
+Done running SimPoint!

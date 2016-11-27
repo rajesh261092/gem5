@@ -1,0 +1,31 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov  7 2016 17:52:15
+gem5 started Nov 26 2016 01:19:45
+gem5 executing on twin, pid 11686
+command line: build/X86/gem5.fast -r --outdir=output/singleCore-1gb/leslie3d configs/example/se.py --cmd=../../../big/rrip/cpu2006/benchspec/CPU2006/437.leslie3d/exe/leslie3d_base.amd64-m64-gcc42-nn --input=../../../big/rrip/cpu2006/benchspec/CPU2006/437.leslie3d/data/test/input/leslie3d.in --output=output/singleCore-1gb/leslie3d/leslie3d.stdout --mem-size=1GB --take-simpoint-checkpoints=output/test2/leslie3d/simpoint.out,output/test2/leslie3d/simpoint.weight,100000000,1000000
+
+simpoint analysis file: output/test2/leslie3d/simpoint.out
+simpoint weight file: output/test2/leslie3d/simpoint.weight
+interval length: 100000000
+warmup length: 1000000
+252 1.0 25199000000 1000000
+Total # of simpoints: 1
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+0: system.remote_gdb.listener: listening for remote gdb on port 7002
+warn: ClockedObject: More than one power state change request encountered within the same simulation tick
+info: Entering event queue @ 0.  Starting simulation...
+warn: instruction 'fwait' unimplemented
+warn: instruction 'fnclex' unimplemented
+info: Increasing stack size by one page.
+warn: readlink() called on '/proc/self/exe' may yield unexpected results in various settings.
+      Returning '/home/local/big/rrip/cpu2006/benchspec/CPU2006/437.leslie3d/exe/leslie3d_base.amd64-m64-gcc42-nn'
+warn: ignoring syscall rt_sigaction(3, ...)
+      (further warnings will be suppressed)
+info: Increasing stack size by one page.
+Writing checkpoint
+Checkpoint #0 written. start inst:25199000000 weight:1.000000
+Exiting @ tick 23743072363000 because simpoint starting point found
+1 checkpoints taken
