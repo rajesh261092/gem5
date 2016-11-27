@@ -173,12 +173,12 @@ else:
 (CPUClass, test_mem_mode, FutureClass) = Simulation.setCPUClass(options)
 CPUClass.numThreads = numThreads
 
-CPUClass.fetchWidth = 4
-CPUClass.decodeWidth = 3
-CPUClass.renameWidth = 4
-CPUClass.dispatchWidth = 4
-CPUClass.issueWidth = 6
-CPUClass.commitWidth = 3
+FutureClass.fetchWidth = 4
+FutureClass.decodeWidth = 3
+FutureClass.renameWidth = 4
+FutureClass.dispatchWidth = 4
+FutureClass.issueWidth = 6
+FutureClass.commitWidth = 3
 
 #CPUClass.LQEntries = 64
 #CPUClass.SQEntries = 64

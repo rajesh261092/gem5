@@ -174,16 +174,6 @@
                 "do_checkpoint_insts": true, 
                 "cxx_class": "AtomicSimpleCPU", 
                 "max_loads_all_threads": 0, 
-                "probeListener": {
-                    "profile_file": "simpoint.bb.gz", 
-                    "name": "probeListener", 
-                    "interval": 10000000, 
-                    "manager": "system.cpu", 
-                    "eventq_index": 0, 
-                    "cxx_class": "SimPoint", 
-                    "path": "system.cpu.probeListener", 
-                    "type": "SimPoint"
-                }, 
                 "system": "system", 
                 "apic_clk_domain": {
                     "name": "apic_clk_domain", 
@@ -204,7 +194,7 @@
                 "p_state_clk_gate_max": 1000000000000, 
                 "do_quiesce": true, 
                 "type": "AtomicSimpleCPU", 
-                "fastmem": true, 
+                "fastmem": false, 
                 "profile": 0, 
                 "icache_port": {
                     "peer": "system.membus.slave[1]", 
@@ -268,7 +258,7 @@
                         "input": "cin", 
                         "ppid": 99, 
                         "type": "LiveProcess", 
-                        "cwd": "/home/local/big/grajesh/perf-project/gem5", 
+                        "cwd": "/home/local/twin/kshitiz/gem5", 
                         "simpoint": 0, 
                         "euid": 100, 
                         "path": "system.cpu.workload", 
@@ -314,7 +304,9 @@
                     "type": "X86TLB", 
                     "size": 64
                 }, 
-                "simpoint_start_insts": [], 
+                "simpoint_start_insts": [
+                    140000000
+                ], 
                 "max_insts_any_thread": 0, 
                 "simulate_inst_stalls": false, 
                 "progress_interval": 0, 

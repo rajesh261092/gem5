@@ -1,19 +1,24 @@
 gem5 Simulator System.  http://gem5.org
 gem5 is copyrighted software; use the --copyright option for details.
 
-gem5 compiled Nov  7 2016 17:31:28
-gem5 started Nov 16 2016 16:01:37
-gem5 executing on big.cerc.utexas.edu, pid 31348
-command line: build/X86/gem5.opt -r --outdir=output/susan/run1 configs/example/se.py --cmd=benchmarks/susan/bin/susan_O2 '--options=benchmarks/susan/input_large.pgm output/susan/run1/output_large.smoothing.pgm -s' --simpoint-profile --fastmem
+gem5 compiled Nov  7 2016 17:40:10
+gem5 started Nov 20 2016 00:14:08
+gem5 executing on big.cerc.utexas.edu, pid 20540
+command line: build/X86/gem5.opt -r --outdir=output/susan/run1 configs/example/se.py --cmd=benchmarks/susan/bin/susan_O2 '--options=benchmarks/susan/input_large.pgm output/susan/run1/output_large.smoothing.pgm -s' --take-simpoint-checkpoints=output/susan/analysis/simpoint_k1.out,output/susan/analysis/simpoint_k1.weight,10000000,0
 
+simpoint analysis file: output/susan/analysis/simpoint_k1.out
+simpoint weight file: output/susan/analysis/simpoint_k1.weight
+interval length: 10000000
+warmup length: 0
+14 1.0 140000000 0
+Total # of simpoints: 1
 Global frequency set at 1000000000000 ticks per second
 warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (512 Mbytes)
-0: system.remote_gdb.listener: listening for remote gdb #0 on port 7001
+0: system.remote_gdb.listener: listening for remote gdb #0 on port 7000
 warn: ClockedObject: More than one power state change request encountered within the same simulation tick
-**** REAL SIMULATION ****
 info: Entering event queue @ 0.  Starting simulation...
 warn: readlink() called on '/proc/self/exe' may yield unexpected results in various settings.
-      Returning '/home/local/big/grajesh/perf-project/gem5/benchmarks/susan/bin/susan_O2'
+      Returning '/home/local/twin/kshitiz/gem5/benchmarks/susan/bin/susan_O2'
 info: Increasing stack size by one page.
 warn: ignoring syscall access(5040129, ...)
 info: Increasing stack size by one page.
@@ -105,4 +110,7 @@ info: Increasing stack size by one page.
 info: Increasing stack size by one page.
 info: Increasing stack size by one page.
 info: Increasing stack size by one page.
-Exiting @ tick 381107312500 because target called exit()
+Writing checkpoint
+Checkpoint #0 written. start inst:140000000 weight:1.000000
+Exiting @ tick 143872183500 because simpoint starting point found
+1 checkpoints taken

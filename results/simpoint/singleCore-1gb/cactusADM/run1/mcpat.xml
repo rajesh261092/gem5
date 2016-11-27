@@ -311,7 +311,7 @@
       <param name="device_type" value="0"/>
       <stat name="read_accesses" value="426815"/>
       <stat name="write_accesses" value="168039"/>
-      <stat name="read_misses" value="298210"/>
+      <stat name="read_misses" value="193592"/>
       <stat name="write_misses" value="104618"/>
       <stat name="conflicts" value="286326"/>	
       <stat name="duty_cycle" value="1.0"/>	
