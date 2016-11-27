@@ -15,3 +15,4 @@ info: Entering event queue @ 0.  Starting simulation...
 warn: instruction 'fwait' unimplemented
 warn: instruction 'fnclex' unimplemented
 info: Increasing stack size by one page.
+Exiting @ tick 3327860307600 because target called exit()

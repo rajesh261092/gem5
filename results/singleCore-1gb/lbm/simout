@@ -13,3 +13,4 @@ warn: ClockedObject: More than one power state change request encountered within
 **** REAL SIMULATION ****
 info: Entering event queue @ 0.  Starting simulation...
 info: Increasing stack size by one page.
+Exiting @ tick 20966355330800 because target called exit()
