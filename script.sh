@@ -1,0 +1,9 @@
+#./cactus.sh
+./calculix.sh
+./dealII.sh
+#./lbm.sh
+#./leslie.sh
+./libquantum.sh
+./perlbench.sh
+#./povray.sh
+./xalancbmk.sh
