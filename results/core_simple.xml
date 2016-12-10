@@ -1,6 +1,6 @@
     <component id="system.core" name="core">
       <!-- Core property -->
-      <param name="clock_rate" value="REPLACE{1e-6/config.system.cpu_clk_domain.clock*1e12}"/>
+      <param name="clock_rate" value="REPLACE{1e-6/config.system.clk_domain.clock*1e12}"/>
       <param name="vdd" value="0"/><!-- 0 means using ITRS -->
       <!-- for cores with unknow timing, set to 0 to force off the opt flag -->
       <param name="opt_local" value="1"/>
@@ -14,17 +14,17 @@
       <!-- number_instruction_fetch_ports(icache ports) is always 1 in single-thread processor,
 	   it only may be more than one in SMT processors. BTB ports always equals to fetch ports since 
 	   branch information in consective branch instructions in the same fetch group can be read out from BTB once.--> 
-      <param name="fetch_width" value="REPLACE{config.system.cpu.fetchWidth}"/>
+      <param name="fetch_width" value="1"/>
       <!-- fetch_width determins the size of cachelines of L1 cache block -->
       <param name="number_instruction_fetch_ports" value="1"/>
-      <param name="decode_width" value="REPLACE{config.system.cpu.decodeWidth}"/>
+      <param name="decode_width" value="1"/>
       <!-- decode_width determins the number of ports of the 
 	   renaming table (both RAM and CAM) scheme -->
-      <param name="issue_width" value="REPLACE{config.system.cpu.issueWidth}"/>
-      <param name="peak_issue_width" value="REPLACE{config.system.cpu.issueWidth}"/>
+      <param name="issue_width" value="1"/>
+      <param name="peak_issue_width" value="1"/>
       <!-- issue_width determins the number of ports of Issue window and other logic 
 	   as in the complexity effective proccessors paper; issue_width==dispatch_width -->
-      <param name="commit_width" value="REPLACE{config.system.cpu.commitWidth}"/>
+      <param name="commit_width" value="1"/>
       <!-- commit_width determins the number of ports of register files -->
       <param name="fp_issue_width" value="2"/>
       <param name="prediction_width" value="1"/> 
@@ -47,20 +47,14 @@
       <param name="decoded_stream_buffer_size" value="16"/>
       <param name="instruction_window_scheme" value="0"/><!-- 0 PHYREG based, 1 RSBASED-->
       <!-- McPAT support 2 types of OoO cores, RS based and physical reg based-->
-      <param name="instruction_window_size" value="REPLACE{config.system.cpu.numIQEntries}"/>
-      <param name="fp_instruction_window_size" value="REPLACE{config.system.cpu.numIQEntries}"/>
       <!-- the instruction issue Q as in Alpha 21264; The RS as in Intel P6 -->
-      <param name="ROB_size" value="REPLACE{config.system.cpu.numROBEntries}"/>
       <!-- each in-flight instruction has an entry in ROB -->
       <!-- registers -->
       <param name="archi_Regs_IRF_size" value="32"/>		
       <param name="archi_Regs_FRF_size" value="32"/>
       <!--  if OoO processor, phy_reg number is needed for renaming logic, 
 	    renaming logic is for both integer and floating point insts.  -->
-      <param name="phy_Regs_IRF_size" value="REPLACE{config.system.cpu.numPhysIntRegs}"/>
-      <param name="phy_Regs_FRF_size" value="REPLACE{config.system.cpu.numPhysFloatRegs}"/>
       <!-- rename logic -->
-      <param name="rename_scheme" value="1"/>
       <!-- can be RAM based(0) or CAM based(1) rename scheme 
 	   RAM-based scheme will have free list, status table;
 	   CAM-based scheme have the valid bit in the data field of the CAM 
@@ -71,10 +65,9 @@
 	   no register windowing is used when this number is 0 -->
       <!-- In OoO cores, loads and stores can be issued whether inorder(Pentium Pro) or (OoO)out-of-order(Alpha),
 	   They will always try to exeute out-of-order though. -->
-      <param name="LSU_order" value="OoO"/>
-      <param name="store_buffer_size" value="REPLACE{config.system.cpu.SQEntries}"/>
+      <param name="LSU_order" value="REPLACE{script.lsupolicy}"/>
+      <param name="store_buffer_size" value="REPLACE{config.system.cpu.executeLSQStoreBufferSize}"/>
       <!-- By default, in-order cores do not have load buffers -->
-      <param name="load_buffer_size" value="REPLACE{config.system.cpu.LQEntries}"/>	
       <!-- number of ports refer to sustainable concurrent memory accesses --> 
       <param name="memory_ports" value="2"/>	
       <!-- max_allowed_in_flight_memo_instructions determins the # of ports of load and store buffer
@@ -83,16 +76,16 @@
       <param name="RAS_size" value="REPLACE{config.system.cpu.branchPred.RASSize}"/>						
       <!-- general stats, defines simulation periods;require total, idle, and busy cycles for senity check  -->
       <!-- please note: if target architecture is X86, then all the instrucions refer to (fused) micro-ops -->
-      <stat name="total_instructions" value="REPLACE{stats.system.cpu.iq.iqInstsIssued}"/>
-      <stat name="int_instructions" value="REPLACE{stats.system.cpu.iq.FU_type_0::No_OpClass + stats.system.cpu.iq.FU_type_0::IntAlu +	stats.system.cpu.iq.FU_type_0::IntMult + stats.system.cpu.iq.FU_type_0::IntDiv + stats.system.cpu.iq.FU_type_0::IprAccess}"/>
-      <stat name="fp_instructions" value="REPLACE{stats.system.cpu.iq.FU_type_0::FloatAdd + stats.system.cpu.iq.FU_type_0::FloatCmp + stats.system.cpu.iq.FU_type_0::FloatCvt + stats.system.cpu.iq.FU_type_0::FloatMult + stats.system.cpu.iq.FU_type_0::FloatDiv + stats.system.cpu.iq.FU_type_0::FloatSqrt}"/>
+      <stat name="total_instructions" value="REPLACE{stats.system.cpu.committedInsts}"/>
+      <stat name="int_instructions" value="REPLACE{stats.system.cpu.op_class_0::No_OpClass + stats.system.cpu.op_class_0.FU_type_0::IntAlu +	stats.system.cpu.op_class_0::IntMult + stats.system.cpu.op_class_0::IntDiv + stats.system.cpu.op_class_0::IprAccess}"/>
+      <stat name="fp_instructions" value="REPLACE{stats.system.cpu.op_class_0::FloatAdd + stats.system.cpu.op_class_0::FloatCmp + stats.system.cpu.op_class_0::FloatCvt + stats.system.cpu.op_class_0::FloatMult + stats.system.cpu.op_class_0::FloatDiv + stats.system.cpu.op_class_0::FloatSqrt}"/>
       <stat name="branch_instructions" value="REPLACE{stats.system.cpu.branchPred.condPredicted}"/>
       <stat name="branch_mispredictions" value="REPLACE{stats.system.cpu.branchPred.condIncorrect}"/>
-      <stat name="load_instructions" value="REPLACE{stats.system.cpu.iq.FU_type_0::MemRead + stats.system.cpu.iq.FU_type_0::InstPrefetch}"/>
-      <stat name="store_instructions" value="REPLACE{stats.system.cpu.iq.FU_type_0::MemWrite}"/>
+      <stat name="load_instructions" value="REPLACE{stats.system.cpu.op_class_0::MemRead + stats.system.cpu.op_class_0::InstPrefetch}"/>
+      <stat name="store_instructions" value="REPLACE{stats.system.cpu.op_class_0::MemWrite}"/>
       <stat name="committed_instructions" value="REPLACE{stats.system.cpu.commit.committedOps}"/>
-      <stat name="committed_int_instructions" value="REPLACE{stats.system.cpu.commit.int_insts}"/>
-      <stat name="committed_fp_instructions" value="REPLACE{stats.system.cpu.commit.fp_insts}"/>
+      <stat name="committed_int_instructions" value="REPLACE{stats.system.cpu.op_class_0::No_OpClass + stats.system.cpu.op_class_0.FU_type_0::IntAlu +	stats.system.cpu.op_class_0::IntMult + stats.system.cpu.op_class_0::IntDiv + stats.system.cpu.op_class_0::IprAccess}"/>
+      <stat name="committed_fp_instructions" value="REPLACE{stats.system.cpu.op_class_0::FloatAdd + stats.system.cpu.op_class_0::FloatCmp + stats.system.cpu.op_class_0::FloatCvt + stats.system.cpu.op_class_0::FloatMult + stats.system.cpu.op_class_0::FloatDiv + stats.system.cpu.op_class_0::FloatSqrt}"/>
       <stat name="pipeline_duty_cycle" value="1"/><!-- lteq 1, runtime_ipc/peak_ipc; averaged for all cores if homogenous -->
       <!-- the following cycle stats are used for heterogeneouse cores only, 
 	   please ignore them if homogeneouse cores -->
@@ -103,13 +96,7 @@
       <!-- ROB stats, both RS and Phy based OoOs have ROB
 	   performance simulator should capture the difference on accesses,
 	   otherwise, McPAT has to guess based on number of commited instructions. -->
-      <stat name="ROB_reads" value="REPLACE{stats.system.cpu.rob.rob_reads}"/>
-      <stat name="ROB_writes" value="REPLACE{stats.system.cpu.rob.rob_writes}"/>
       <!-- RAT accesses -->
-      <stat name="rename_reads" value="REPLACE{stats.system.cpu.rename.int_rename_lookups}"/> <!--lookup in renaming logic -->
-      <stat name="rename_writes" value="REPLACE{int(stats.system.cpu.rename.RenamedOperands * stats.system.cpu.rename.int_rename_lookups / stats.system.cpu.rename.RenameLookups)}"/><!--update dest regs. renaming logic -->
-      <stat name="fp_rename_reads" value="REPLACE{stats.system.cpu.rename.fp_rename_lookups}"/>
-      <stat name="fp_rename_writes" value="REPLACE{int(stats.system.cpu.rename.RenamedOperands * stats.system.cpu.rename.fp_rename_lookups / stats.system.cpu.rename.RenameLookups)}"/>
       <!-- decode and rename stage use this, should be total ic - nop -->
       <!-- Inst window stats -->
       <stat name="inst_window_reads" value="REPLACE{stats.system.cpu.iq.int_inst_queue_reads}"/>
@@ -119,12 +106,12 @@
       <stat name="fp_inst_window_writes" value="REPLACE{stats.system.cpu.iq.fp_inst_queue_writes}"/>
       <stat name="fp_inst_window_wakeup_accesses" value="REPLACE{stats.system.cpu.iq.fp_inst_queue_wakeup_accesses}"/>
       <!--  RF accesses -->
-      <stat name="int_regfile_reads" value="REPLACE{stats.system.cpu.int_regfile_reads}"/>
-      <stat name="float_regfile_reads" value="REPLACE{stats.system.cpu.fp_regfile_reads}"/>
-      <stat name="int_regfile_writes" value="REPLACE{stats.system.cpu.int_regfile_writes}"/>
-      <stat name="float_regfile_writes" value="REPLACE{stats.system.cpu.fp_regfile_writes}"/>
+      <!-- stat name="int_regfile_reads" value="REPLACE{stats.system.cpu.num_int_register_reads}"/>
+      <stat name="float_regfile_reads" value="REPLACE{stats.system.cpu.num_fp_register_reads}"/>
+      <stat name="int_regfile_writes" value="REPLACE{stats.system.cpu.num_int_register_writes}"/>
+      <stat name="float_regfile_writes" value="REPLACE{stats.system.cpu.num_fp_register_writes}"/-->
       <!-- accesses to the working reg -->
-      <stat name="function_calls" value="REPLACE{stats.system.cpu.commit.function_calls}"/>
+      <stat name="function_calls" value="REPLACE{stats.system.cpu.num_func_calls}"/>
       <stat name="context_switches" value="REPLACE{stats.system.cpu.workload.num_syscalls}"/>
       <!-- Number of Windowes switches (number of function calls and returns)-->
       <!-- Alu stats by default, the processor has one FPU that includes the divider and 

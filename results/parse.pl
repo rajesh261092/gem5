@@ -8,10 +8,12 @@ my $config  = "config.ini";
 my $template  = "mcpat-template.xml";
 my $coretemplate  = "core.xml";
 my $outfile = "output.xml";
+my $technode = 22;
 GetOptions ("stats=s" => \$stats,
     "template=s" => \$template,
     "core=s" => \$coretemplate,
     "out=s" => \$outfile,
+    "tech=i" => \$technode,
     "config=s"   => \$config)
     or die("Error in command line arguments\n");
 
@@ -30,6 +32,7 @@ foreach my $line (<CONFIG>)
     $head=~s/cpu$/cpu0/g;
     $head=~s/core$/core0/g;
     $head=~s/switch_cpus$/cpu0/g;
+    $line=~s/switch_cpus(\d+)/cpu$1/g;
     $line=~s/cpu\./cpu0\./g;
     $line=~s/switch_cpus\./cpu0\./g;
     $line=~s/core\./core0\./g;
@@ -79,6 +82,7 @@ foreach my $line (<STAT>)
 {
     $line=~s/cpu\./cpu0\./g;
     $line=~s/switch_cpus\./cpu0\./g;
+    $line=~s/switch_cpus(\d+)/cpu$1/g;
     $line=~s/core\./core0\./g;
     if($line=~m/#/)
     {
@@ -97,20 +101,25 @@ foreach my $line (<STAT>)
                 $data{$key}=$value;
                 #print $key,"\n";
             }
+            #print $key,":",$value,"\n";
         }
     }
 }
 
 $data{"script.num_cores"}=$cpucount+1;
 $data{"script.num_nocs"}=1;
-$data{"script.technology"}=22;
+$data{"script.technology"}=$technode;
 if($cpucount==0)
 {
     $data{"script.pipeline"}=0;
+    $data{"script.pipe_depth"}=7;
+    $data{"script.lsupolicy"}="OoO";
 }
 else
 {
     $data{"script.pipeline"}=1;
+    $data{"script.pipe_depth"}=4;
+    $data{"script.lsupolicy"}="inorder";
 }
 $data{"script.device_type"}=0;
 #<!--0: HP(High Performance Type); 1: LSTP(Low standby power) 2: LOP (Low Operating Power)  -
@@ -128,6 +137,11 @@ foreach my $num (0..$cpucount)
     $data{"script.numcycles"}+=$data{$key};
     $key="stats.system.cpu"."$num".".idleCycles";
     $data{"script.idlecycles"}+=$data{$key};
+    if($cpucount)
+    {
+        $key="config.system.cpu"."$num".".dcache.assoc";
+        $data{$key}=4;
+    }
 }
 
 
@@ -162,9 +176,9 @@ foreach my $line (<XML>)
                 {
                     $coreline=~s/core\./$corename/g;
                     $coreline=~s/cpu\./$cpuname/g;
-                    if($cpucount)
+                    if($coreline=~/"system\.core"/)
                     {
-                        $coreline=~s/$cpuname/$multicpu/g;
+                        $coreline=~s/core/core$num/g;
                     }
                     if($coreline=~/REPLACE/)
                     {
