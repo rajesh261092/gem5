@@ -1,0 +1,73 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov  7 2016 17:52:15
+gem5 started Nov 26 2016 03:23:39
+gem5 executing on twin, pid 14544
+command line: build/X86/gem5.fast -r --outdir=output/singleCore-1gb/povray/run1 configs/example/singleCore.py --cpu-type=detailed --caches --l2cache --cmd=../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/exe/povray_base.amd64-m64-gcc42-nn '--options=../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/data/test/input/SPEC-benchmark-test.ini -I../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/data/test/input/SPEC-benchmark-test.pov +L../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/data/all/input/' --output=output/singleCore-1gb/povray/SPEC-benchmark-test.stdout --mem-size=1GB --restore-simpoint-checkpoint -r 1 --checkpoint-dir=output/singleCore-1gb/povray/
+
+Resuming from output/singleCore-1gb/povray/cpt.simpoint_00_inst_1299000000_weight_1.000000_interval_100000000_warmup_1000000
+Resuming from SimPoint #0, start_inst:1299000000, weight:1.000000, interval:100000000, warmup:1000000
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+0: system.remote_gdb.listener: listening for remote gdb on port 7004
+warn: optional parameter system.cpu.workload:M5_pid not present
+Switch at curTick count:10000
+info: Entering event queue @ 1421967812000.  Starting simulation...
+Switched CPUS @ tick 1421967822000
+switching cpus
+info: Entering event queue @ 1421967822000.  Starting simulation...
+info: Entering event queue @ 1421967822400.  Starting simulation...
+Warmed up! Dumping and resetting stats!
+info: Entering event queue @ 1422546008000.  Starting simulation...
+Render Statistics (Partial Image Rendered)
+Image Resolution 50 x 50
+----------------------------------------------------------------------------
+Pixels:             1350   Samples:           17636
+Rays:              36467   Saved:               151   Max Level: 5/5
+----------------------------------------------------------------------------
+Ray->Shape Intersection          Tests       Succeeded
+----------------------------------------------------------------------------
+Box                               4507            4507
+Cone/Cylinder                     2560             782
+CSG Intersection                813862           27751
+CSG Union                        26707           22837
+Plane                          1894619         1242674
+Quadric                         336312           80998
+Sphere                         2894801           38443
+Bounding Box                   1018390          211719
+Light Buffer                    796364          419896
+----------------------------------------------------------------------------
+Calls to Noise:              110140   Calls to DNoise:           91522
+----------------------------------------------------------------------------
+Shadow Ray Tests:             43720   Succeeded:                  2029
+Reflected Rays:               18831
+Bounding Queues:             871879
+Queue Resets:                 58821   Queue Resizes:                 0
+----------------------------------------------------------------------------
+Render Statistics (Partial Image Rendered)
+Image Resolution 50 x 50
+----------------------------------------------------------------------------
+Pixels:             1400   Samples:           18360
+Rays:              38457   Saved:               171   Max Level: 5/5
+----------------------------------------------------------------------------
+Ray->Shape Intersection          Tests       Succeeded
+----------------------------------------------------------------------------
+Box                               4899            4899
+Cone/Cylinder                     2593             788
+CSG Intersection                856880           29824
+CSG Union                        28968           24602
+Plane                          1996594         1301815
+Quadric                         355690           86301
+Sphere                         3046893           40076
+Bounding Box                   1070300          223980
+Light Buffer                    835054          441686
+----------------------------------------------------------------------------
+Calls to Noise:              119075   Calls to DNoise:           98416
+----------------------------------------------------------------------------
+Shadow Ray Tests:             46055   Succeeded:                  2133
+Reflected Rays:               20097
+Bounding Queues:             919070
+Queue Resets:                 61922   Queue Resizes:                 0
+----------------------------------------------------------------------------
+Done running SimPoint!

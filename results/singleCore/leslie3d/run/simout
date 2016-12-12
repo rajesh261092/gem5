@@ -1,0 +1,9 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov  7 2016 17:52:15
+gem5 started Nov 25 2016 23:58:22
+gem5 executing on twin, pid 10269
+command line: build/X86/gem5.fast -r --outdir=output/singleCore-1gb/leslie3d/run configs/example/singleCore.py --cpu-type=detailed --caches --l2cache --cmd=../../../big/rrip/cpu2006/benchspec/CPU2006/437.leslie3d/exe/leslie3d_base.amd64-m64-gcc42-nn --input=../../../big/rrip/cpu2006/benchspec/CPU2006/437.leslie3d/data/test/input/leslie3d.in --output=output/singleCore-1gb/leslie3d/leslie3d.stdout --mem-size=1GB --restore-simpoint-checkpoint -r 1 --checkpoint-dir=output/singleCore-1gb/leslie3d/
+
+fatal: Checkpoint 1 not found

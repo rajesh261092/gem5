@@ -1,0 +1,60 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 27 2016 12:46:38
+gem5 started Nov 28 2016 00:29:22
+gem5 executing on twin, pid 24253
+ERROR:root:code for hash md5 was not found.
+Traceback (most recent call last):
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 147, in <module>
+    globals()[__func_name] = __get_hash(__func_name)
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 97, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type md5
+ERROR:root:code for hash sha1 was not found.
+Traceback (most recent call last):
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 147, in <module>
+    globals()[__func_name] = __get_hash(__func_name)
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 97, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type sha1
+ERROR:root:code for hash sha224 was not found.
+Traceback (most recent call last):
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 147, in <module>
+    globals()[__func_name] = __get_hash(__func_name)
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 97, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type sha224
+ERROR:root:code for hash sha256 was not found.
+Traceback (most recent call last):
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 147, in <module>
+    globals()[__func_name] = __get_hash(__func_name)
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 97, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type sha256
+ERROR:root:code for hash sha384 was not found.
+Traceback (most recent call last):
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 147, in <module>
+    globals()[__func_name] = __get_hash(__func_name)
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 97, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type sha384
+ERROR:root:code for hash sha512 was not found.
+Traceback (most recent call last):
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 147, in <module>
+    globals()[__func_name] = __get_hash(__func_name)
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 97, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type sha512
+command line: build/X86/gem5.fast -r --outdir=output/singleCore-1gb/perlbench/run1 configs/example/single_simple.py --cpu-type=detailed --caches --l2cache --cmd=../../../big/rrip/cpu2006/benchspec/CPU2006/400.perlbench/exe/perlbench_base.amd64-m64-gcc42-nn '--options=-I../../../big/rrip/cpu2006/benchspec/CPU2006/400.perlbench/run/run_base_test_amd64-m64-gcc42-nn.0000 -I../../../big/rrip/cpu2006/benchspec/CPU2006/400.perlbench/run/run_base_test_amd64-m64-gcc42-nn.0000/lib ../../../big/rrip/cpu2006/benchspec/CPU2006/400.perlbench/run/run_base_test_amd64-m64-gcc42-nn.0000/attrs.pl' --output=output/singleCore-1gb/perlbench/perlbench.out --mem-size=1GB
+
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+0: system.remote_gdb.listener: listening for remote gdb on port 7016
+warn: ClockedObject: More than one power state change request encountered within the same simulation tick
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+Exiting @ tick 9802373200 because target called exit()

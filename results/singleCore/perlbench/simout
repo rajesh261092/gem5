@@ -1,0 +1,65 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 27 2016 12:46:38
+gem5 started Nov 27 2016 20:25:42
+gem5 executing on twin, pid 18772
+ERROR:root:code for hash md5 was not found.
+Traceback (most recent call last):
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 147, in <module>
+    globals()[__func_name] = __get_hash(__func_name)
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 97, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type md5
+ERROR:root:code for hash sha1 was not found.
+Traceback (most recent call last):
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 147, in <module>
+    globals()[__func_name] = __get_hash(__func_name)
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 97, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type sha1
+ERROR:root:code for hash sha224 was not found.
+Traceback (most recent call last):
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 147, in <module>
+    globals()[__func_name] = __get_hash(__func_name)
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 97, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type sha224
+ERROR:root:code for hash sha256 was not found.
+Traceback (most recent call last):
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 147, in <module>
+    globals()[__func_name] = __get_hash(__func_name)
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 97, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type sha256
+ERROR:root:code for hash sha384 was not found.
+Traceback (most recent call last):
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 147, in <module>
+    globals()[__func_name] = __get_hash(__func_name)
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 97, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type sha384
+ERROR:root:code for hash sha512 was not found.
+Traceback (most recent call last):
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 147, in <module>
+    globals()[__func_name] = __get_hash(__func_name)
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 97, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type sha512
+command line: build/X86/gem5.fast -r --outdir=output/singleCore-1gb/perlbench configs/example/se.py --cmd=../../../big/rrip/cpu2006/benchspec/CPU2006/400.perlbench/exe/perlbench_base.amd64-m64-gcc42-nn '--options=-I../../../big/rrip/cpu2006/benchspec/CPU2006/400.perlbench/run/run_base_test_amd64-m64-gcc42-nn.0000 -I../../../big/rrip/cpu2006/benchspec/CPU2006/400.perlbench/run/run_base_test_amd64-m64-gcc42-nn.0000/lib ../../../big/rrip/cpu2006/benchspec/CPU2006/400.perlbench/run/run_base_test_amd64-m64-gcc42-nn.0000/attrs.pl' --output=output/singleCore-1gb/perlbench/perlbench.out --mem-size=1GB --take-simpoint-checkpoints=output/test2/perlbench/simpoint.out,output/test2/perlbench/simpoint.weight,10000000,1000000
+
+simpoint analysis file: output/test2/perlbench/simpoint.out
+simpoint weight file: output/test2/perlbench/simpoint.weight
+interval length: 10000000
+warmup length: 1000000
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/home/local/twin/kshitiz/gem5/src/python/m5/main.py", line 400, in main
+    exec filecode in scope
+  File "configs/example/se.py", line 287, in <module>
+    Simulation.run(options, root, system, FutureClass)
+  File "/home/local/twin/kshitiz/gem5/configs/common/Simulation.py", line 584, in run
+    simpoints, interval_length = parseSimpointAnalysisFile(options, testsys)
+  File "/home/local/twin/kshitiz/gem5/configs/common/Simulation.py", line 299, in parseSimpointAnalysisFile
+    simpoint_file = open(simpoint_filename)
+IOError: [Errno 2] No such file or directory: 'output/test2/perlbench/simpoint.out'

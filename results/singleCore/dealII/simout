@@ -1,0 +1,65 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 27 2016 12:46:38
+gem5 started Nov 27 2016 20:58:02
+gem5 executing on twin, pid 20052
+ERROR:root:code for hash md5 was not found.
+Traceback (most recent call last):
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 147, in <module>
+    globals()[__func_name] = __get_hash(__func_name)
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 97, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type md5
+ERROR:root:code for hash sha1 was not found.
+Traceback (most recent call last):
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 147, in <module>
+    globals()[__func_name] = __get_hash(__func_name)
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 97, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type sha1
+ERROR:root:code for hash sha224 was not found.
+Traceback (most recent call last):
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 147, in <module>
+    globals()[__func_name] = __get_hash(__func_name)
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 97, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type sha224
+ERROR:root:code for hash sha256 was not found.
+Traceback (most recent call last):
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 147, in <module>
+    globals()[__func_name] = __get_hash(__func_name)
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 97, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type sha256
+ERROR:root:code for hash sha384 was not found.
+Traceback (most recent call last):
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 147, in <module>
+    globals()[__func_name] = __get_hash(__func_name)
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 97, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type sha384
+ERROR:root:code for hash sha512 was not found.
+Traceback (most recent call last):
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 147, in <module>
+    globals()[__func_name] = __get_hash(__func_name)
+  File "/home/unga/grajesh/lib/python2.7/hashlib.py", line 97, in __get_builtin_constructor
+    raise ValueError('unsupported hash type ' + name)
+ValueError: unsupported hash type sha512
+command line: build/X86/gem5.fast -r --outdir=output/singleCore-1gb/dealII configs/example/se.py --cmd=../../../big/rrip/cpu2006/benchspec/CPU2006/447.dealII/exe/dealII_base.amd64-m64-gcc42-nn --options=8 --mem-size=1GB --take-simpoint-checkpoints=output/test2/dealII/simpoint.out,output/test2/dealII/simpoint.weight,100000000,1000000
+
+simpoint analysis file: output/test2/dealII/simpoint.out
+simpoint weight file: output/test2/dealII/simpoint.weight
+interval length: 100000000
+warmup length: 1000000
+0 1.0 0 0
+Total # of simpoints: 1
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+0: system.remote_gdb.listener: listening for remote gdb on port 7000
+warn: ClockedObject: More than one power state change request encountered within the same simulation tick
+info: Entering event queue @ 0.  Starting simulation...
+Writing checkpoint
+Checkpoint #0 written. start inst:0 weight:1.000000
+Exiting @ tick 0 because simpoint starting point found
+1 checkpoints taken

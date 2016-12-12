@@ -1,0 +1,27 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov  7 2016 17:52:15
+gem5 started Nov 26 2016 01:19:45
+gem5 executing on twin, pid 11684
+command line: build/X86/gem5.fast -r --outdir=output/singleCore-1gb/cactusADM configs/example/se.py --cmd=../../../big/rrip/cpu2006/benchspec/CPU2006/436.cactusADM/exe/cactusADM_base.amd64-m64-gcc42-nn --options=../../../big/rrip/cpu2006/benchspec/CPU2006/436.cactusADM/data/test/input/benchADM.par --output=output/singleCore-1gb/cactusADM/benchADM.out --mem-size=1GB --take-simpoint-checkpoints=output/test2/cactusADM/simpoint.out,output/test2/cactusADM/simpoint.weight,100000000,1000000
+
+simpoint analysis file: output/test2/cactusADM/simpoint.out
+simpoint weight file: output/test2/cactusADM/simpoint.weight
+interval length: 100000000
+warmup length: 1000000
+50 1.0 4999000000 1000000
+Total # of simpoints: 1
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (1024 Mbytes)
+0: system.remote_gdb.listener: listening for remote gdb on port 7004
+warn: ClockedObject: More than one power state change request encountered within the same simulation tick
+info: Entering event queue @ 0.  Starting simulation...
+warn: instruction 'fwait' unimplemented
+warn: instruction 'fnclex' unimplemented
+info: Increasing stack size by one page.
+info: Entering event queue @ 5191999162000.  Starting simulation...
+Writing checkpoint
+Checkpoint #0 written. start inst:4999000000 weight:1.000000
+Exiting @ tick 5191999163000 because simpoint starting point found
+1 checkpoints taken
