@@ -1,0 +1,29 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 27 2016 12:46:38
+gem5 started Dec  7 2016 06:02:01
+gem5 executing on big.cerc.utexas.edu, pid 23235
+command line: build/X86/gem5.fast -r --outdir=output/multiCore/cacheUpdate/lbm configs/example/multiCore.py --restore-simpoint-checkpoint -r 1 --checkpoint-dir=output/multiCore/lbmprofile3/ '--cmd=../../../big/rrip/cpu2006/benchspec/CPU2006/470.lbm/exe/lbm_base.amd64-m64-gcc42-nn;../../../big/rrip/cpu2006/benchspec/CPU2006/470.lbm/exe/lbm_base.amd64-m64-gcc42-nn;../../../big/rrip/cpu2006/benchspec/CPU2006/470.lbm/exe/lbm_base.amd64-m64-gcc42-nn;../../../big/rrip/cpu2006/benchspec/CPU2006/470.lbm/exe/lbm_base.amd64-m64-gcc42-nn' '--options=20 reference.dat 0 1 ../../../big/rrip/cpu2006/benchspec/CPU2006/470.lbm/data/test/input/100_100_130_cf_a.of;20 reference.dat 0 1 ../../../big/rrip/cpu2006/benchspec/CPU2006/470.lbm/data/test/input/100_100_130_cf_a.of;20 reference.dat 0 1 ../../../big/rrip/cpu2006/benchspec/CPU2006/470.lbm/data/test/input/100_100_130_cf_a.of;20 reference.dat 0 1 ../../../big/rrip/cpu2006/benchspec/CPU2006/470.lbm/data/test/input/100_100_130_cf_a.of' '--output=output/singleCore-1gb/lbm/lbm.out1;output/singleCore-1gb/lbm/lbm.out2;output/singleCore-1gb/lbm/lbm.out3;output/singleCore-1gb/lbm/lbm.out4' --cpu-type=minor --caches --l2cache --num-cpus=4 --mem-size=4GB
+
+Resuming from output/multiCore/lbmprofile3/cpt.simpoint_00_inst_2799000000_weight_1.000000_interval_100000000_warmup_1000000
+Resuming from SimPoint #0, start_inst:2799000000, weight:1.000000, interval:100000000, warmup:1000000
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (4096 Mbytes)
+0: system.remote_gdb.listener: listening for remote gdb on port 7004
+0: system.remote_gdb.listener: listening for remote gdb on port 7005
+0: system.remote_gdb.listener: listening for remote gdb on port 7006
+0: system.remote_gdb.listener: listening for remote gdb on port 7007
+warn: optional parameter system.cpu0.workload:M5_pid not present
+warn: optional parameter system.cpu1.workload:M5_pid not present
+warn: optional parameter system.cpu2.workload:M5_pid not present
+warn: optional parameter system.cpu3.workload:M5_pid not present
+Switch at curTick count:10000
+info: Entering event queue @ 2535094827000.  Starting simulation...
+Switched CPUS @ tick 2535094837000
+switching cpus
+info: Entering event queue @ 2535094837000.  Starting simulation...
+info: Entering event queue @ 2535094837121.  Starting simulation...
+Warmed up! Dumping and resetting stats!
+info: Entering event queue @ 2539344332476.  Starting simulation...
+Done running SimPoint!
