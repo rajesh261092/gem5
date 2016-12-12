@@ -1,0 +1,52 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 27 2016 12:46:38
+gem5 started Dec  7 2016 03:09:28
+gem5 executing on big.cerc.utexas.edu, pid 15235
+command line: build/X86/gem5.fast -r --outdir=output/multiCore/cacheUpdate/dealII configs/example/multiCore.py --restore-simpoint-checkpoint -r 1 --checkpoint-dir=output/multiCore/dealIIprofile/ '--cmd=../../../big/rrip/cpu2006/benchspec/CPU2006/447.dealII/exe/dealII_base.amd64-m64-gcc42-nn;../../../big/rrip/cpu2006/benchspec/CPU2006/447.dealII/exe/dealII_base.amd64-m64-gcc42-nn;../../../big/rrip/cpu2006/benchspec/CPU2006/447.dealII/exe/dealII_base.amd64-m64-gcc42-nn;../../../big/rrip/cpu2006/benchspec/CPU2006/447.dealII/exe/dealII_base.amd64-m64-gcc42-nn' '--options=8;8;8;8' --cpu-type=minor --caches --l2cache --num-cpus=4 --mem-size=4GB
+
+Resuming from output/multiCore/dealIIprofile/cpt.simpoint_00_inst_0_weight_1.000000_interval_100000000_warmup_0
+Resuming from SimPoint #0, start_inst:0, weight:1.000000, interval:100000000, warmup:0
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (4096 Mbytes)
+0: system.remote_gdb.listener: listening for remote gdb on port 7048
+0: system.remote_gdb.listener: listening for remote gdb on port 7049
+0: system.remote_gdb.listener: listening for remote gdb on port 7050
+0: system.remote_gdb.listener: listening for remote gdb on port 7051
+warn: optional parameter system.cpu0.workload:M5_pid not present
+warn: optional parameter system.cpu1.workload:M5_pid not present
+warn: optional parameter system.cpu2.workload:M5_pid not present
+warn: optional parameter system.cpu3.workload:M5_pid not present
+Switch at curTick count:10000
+warn: ClockedObject: More than one power state change request encountered within the same simulation tick
+warn: ClockedObject: More than one power state change request encountered within the same simulation tick
+warn: ClockedObject: More than one power state change request encountered within the same simulation tick
+warn: ClockedObject: More than one power state change request encountered within the same simulation tick
+warn: ClockedObject: More than one power state change request encountered within the same simulation tick
+warn: ClockedObject: More than one power state change request encountered within the same simulation tick
+warn: ClockedObject: More than one power state change request encountered within the same simulation tick
+warn: ClockedObject: More than one power state change request encountered within the same simulation tick
+info: Entering event queue @ 0.  Starting simulation...
+Switched CPUS @ tick 833
+switching cpus
+info: Entering event queue @ 833.  Starting simulation...
+Warmed up! Dumping and resetting stats!
+info: Entering event queue @ 207417.  Starting simulation...
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+info: Increasing stack size by one page.
+warn: instruction 'fsubrp' unimplemented
+warn: instruction 'fsubrp' unimplemented
+warn: instruction 'fsubr' unimplemented
+warn: instruction 'fdivrp' unimplemented
+Refinement cycle: 0
+Refinement cycle: 0
+Refinement cycle: 0
+Refinement cycle: 0
+Done running SimPoint!

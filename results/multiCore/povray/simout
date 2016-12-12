@@ -1,0 +1,228 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 27 2016 12:46:38
+gem5 started Dec  7 2016 03:08:14
+gem5 executing on big.cerc.utexas.edu, pid 14799
+command line: build/X86/gem5.fast -r --outdir=output/multiCore/cacheUpdate/povray configs/example/multiCore.py --restore-simpoint-checkpoint -r 1 --checkpoint-dir=output/multiCore/povrayprofile2/ '--cmd=../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/exe/povray_base.amd64-m64-gcc42-nn;../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/exe/povray_base.amd64-m64-gcc42-nn;../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/exe/povray_base.amd64-m64-gcc42-nn;../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/exe/povray_base.amd64-m64-gcc42-nn' '--options=../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/data/test/input/SPEC-benchmark-test.ini -I../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/data/test/input/SPEC-benchmark-test.pov +L../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/data/all/input/;../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/data/test/input/SPEC-benchmark-test.ini -I../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/data/test/input/SPEC-benchmark-test.pov +L../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/data/all/input/;../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/data/test/input/SPEC-benchmark-test.ini -I../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/data/test/input/SPEC-benchmark-test.pov +L../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/data/all/input/;../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/data/test/input/SPEC-benchmark-test.ini -I../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/data/test/input/SPEC-benchmark-test.pov +L../../../big/rrip/cpu2006/benchspec/CPU2006/453.povray/data/all/input/' '--output=output/singleCore-1gb/povray/SPEC-benchmark-test.stdout1;output/singleCore-1gb/povray/SPEC-benchmark-test.stdout2;output/singleCore-1gb/povray/SPEC-benchmark-test.stdout3;output/singleCore-1gb/povray/SPEC-benchmark-test.stdout4' --cpu-type=minor --caches --l2cache --num-cpus=4 --mem-size=4GB
+
+Resuming from output/multiCore/povrayprofile2/cpt.simpoint_00_inst_1299000000_weight_1.000000_interval_100000000_warmup_1000000
+Resuming from SimPoint #0, start_inst:1299000000, weight:1.000000, interval:100000000, warmup:1000000
+Global frequency set at 1000000000000 ticks per second
+warn: DRAM device capacity (8192 Mbytes) does not match the address range assigned (4096 Mbytes)
+0: system.remote_gdb.listener: listening for remote gdb on port 7056
+0: system.remote_gdb.listener: listening for remote gdb on port 7057
+0: system.remote_gdb.listener: listening for remote gdb on port 7058
+0: system.remote_gdb.listener: listening for remote gdb on port 7059
+warn: optional parameter system.cpu0.workload:M5_pid not present
+warn: optional parameter system.cpu1.workload:M5_pid not present
+warn: optional parameter system.cpu2.workload:M5_pid not present
+warn: optional parameter system.cpu3.workload:M5_pid not present
+Switch at curTick count:10000
+info: Entering event queue @ 1421967812000.  Starting simulation...
+Switched CPUS @ tick 1421967822000
+switching cpus
+info: Entering event queue @ 1421967822000.  Starting simulation...
+Warmed up! Dumping and resetting stats!
+info: Entering event queue @ 1425278640408.  Starting simulation...
+Render Statistics (Partial Image Rendered)
+Render Statistics (Partial Image Rendered)
+Render Statistics (Partial Image Rendered)
+Render Statistics (Partial Image Rendered)
+Image Resolution 50 x 50
+Image Resolution 50 x 50
+Image Resolution 50 x 50
+Image Resolution 50 x 50
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+Pixels:             1350   Samples:           17636
+Pixels:             1350   Samples:           17636
+Pixels:             1350   Samples:           17636
+Pixels:             1350   Samples:           17636
+Rays:              36467   Saved:               151   Max Level: 5/5
+Rays:              36467   Saved:               151   Max Level: 5/5
+Rays:              36467   Saved:               151   Max Level: 5/5
+Rays:              36467   Saved:               151   Max Level: 5/5
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+Ray->Shape Intersection          Tests       Succeeded
+Ray->Shape Intersection          Tests       Succeeded
+Ray->Shape Intersection          Tests       Succeeded
+Ray->Shape Intersection          Tests       Succeeded
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+Box                               4507            4507
+Box                               4507            4507
+Box                               4507            4507
+Box                               4507            4507
+Cone/Cylinder                     2560             782
+Cone/Cylinder                     2560             782
+Cone/Cylinder                     2560             782
+Cone/Cylinder                     2560             782
+CSG Intersection                813862           27751
+CSG Intersection                813862           27751
+CSG Intersection                813862           27751
+CSG Intersection                813862           27751
+CSG Union                        26707           22837
+CSG Union                        26707           22837
+CSG Union                        26707           22837
+CSG Union                        26707           22837
+Plane                          1894619         1242674
+Plane                          1894619         1242674
+Plane                          1894619         1242674
+Plane                          1894619         1242674
+Quadric                         336312           80998
+Quadric                         336312           80998
+Quadric                         336312           80998
+Quadric                         336312           80998
+Sphere                         2894801           38443
+Sphere                         2894801           38443
+Sphere                         2894801           38443
+Sphere                         2894801           38443
+Bounding Box                   1018390          211719
+Bounding Box                   1018390          211719
+Bounding Box                   1018390          211719
+Bounding Box                   1018390          211719
+Light Buffer                    796364          419896
+Light Buffer                    796364          419896
+Light Buffer                    796364          419896
+Light Buffer                    796364          419896
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+Calls to Noise:              110140   Calls to DNoise:           91522
+Calls to Noise:              110140   Calls to DNoise:           91522
+Calls to Noise:              110140   Calls to DNoise:           91522
+Calls to Noise:              110140   Calls to DNoise:           91522
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+Shadow Ray Tests:             43720   Succeeded:                  2029
+Shadow Ray Tests:             43720   Succeeded:                  2029
+Shadow Ray Tests:             43720   Succeeded:                  2029
+Shadow Ray Tests:             43720   Succeeded:                  2029
+Reflected Rays:               18831
+Reflected Rays:               18831
+Reflected Rays:               18831
+Reflected Rays:               18831
+Bounding Queues:             871879
+Bounding Queues:             871879
+Bounding Queues:             871879
+Bounding Queues:             871879
+Queue Resets:                 58821   Queue Resizes:                 0
+Queue Resets:                 58821   Queue Resizes:                 0
+Queue Resets:                 58821   Queue Resizes:                 0
+Queue Resets:                 58821   Queue Resizes:                 0
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+Render Statistics (Partial Image Rendered)
+Render Statistics (Partial Image Rendered)
+Render Statistics (Partial Image Rendered)
+Render Statistics (Partial Image Rendered)
+Image Resolution 50 x 50
+Image Resolution 50 x 50
+Image Resolution 50 x 50
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+Image Resolution 50 x 50
+----------------------------------------------------------------------------
+Pixels:             1400   Samples:           18360
+Pixels:             1400   Samples:           18360
+Pixels:             1400   Samples:           18360
+Pixels:             1400   Samples:           18360
+Rays:              38457   Saved:               171   Max Level: 5/5
+Rays:              38457   Saved:               171   Max Level: 5/5
+Rays:              38457   Saved:               171   Max Level: 5/5
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+Rays:              38457   Saved:               171   Max Level: 5/5
+----------------------------------------------------------------------------
+Ray->Shape Intersection          Tests       Succeeded
+Ray->Shape Intersection          Tests       Succeeded
+----------------------------------------------------------------------------
+Ray->Shape Intersection          Tests       Succeeded
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+Ray->Shape Intersection          Tests       Succeeded
+----------------------------------------------------------------------------
+Box                               4899            4899
+Box                               4899            4899
+Box                               4899            4899
+Box                               4899            4899
+Cone/Cylinder                     2593             788
+Cone/Cylinder                     2593             788
+Cone/Cylinder                     2593             788
+Cone/Cylinder                     2593             788
+CSG Intersection                856880           29824
+CSG Intersection                856880           29824
+CSG Intersection                856880           29824
+CSG Intersection                856880           29824
+CSG Union                        28968           24602
+CSG Union                        28968           24602
+CSG Union                        28968           24602
+CSG Union                        28968           24602
+Plane                          1996594         1301815
+Plane                          1996594         1301815
+Plane                          1996594         1301815
+Plane                          1996594         1301815
+Quadric                         355690           86301
+Quadric                         355690           86301
+Quadric                         355690           86301
+Quadric                         355690           86301
+Sphere                         3046893           40076
+Sphere                         3046893           40076
+Sphere                         3046893           40076
+Sphere                         3046893           40076
+Bounding Box                   1070300          223980
+Bounding Box                   1070300          223980
+Bounding Box                   1070300          223980
+Bounding Box                   1070300          223980
+Light Buffer                    835054          441686
+Light Buffer                    835054          441686
+Light Buffer                    835054          441686
+Light Buffer                    835054          441686
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+Calls to Noise:              119075   Calls to DNoise:           98416
+Calls to Noise:              119075   Calls to DNoise:           98416
+Calls to Noise:              119075   Calls to DNoise:           98416
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+Calls to Noise:              119075   Calls to DNoise:           98416
+----------------------------------------------------------------------------
+Shadow Ray Tests:             46055   Succeeded:                  2133
+Shadow Ray Tests:             46055   Succeeded:                  2133
+Shadow Ray Tests:             46055   Succeeded:                  2133
+Reflected Rays:               20097
+Shadow Ray Tests:             46055   Succeeded:                  2133
+Reflected Rays:               20097
+Reflected Rays:               20097
+Bounding Queues:             919070
+Reflected Rays:               20097
+Bounding Queues:             919070
+Bounding Queues:             919070
+Queue Resets:                 61922   Queue Resizes:                 0
+Bounding Queues:             919070
+Queue Resets:                 61922   Queue Resizes:                 0
+Queue Resets:                 61922   Queue Resizes:                 0
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+Queue Resets:                 61922   Queue Resizes:                 0
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+Done running SimPoint!
